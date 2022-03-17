@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 
-export default function Card({ text }) {
-    const question = 'Porque alguma coisa?'
-    const answer = 'Porque sim'
+export default function Card({text, q:question, a:answer}) {
 
     const [card, setCard] = useState(
         { screen: 0, icon: "play.svg", alt: "play" }
@@ -12,7 +10,7 @@ export default function Card({ text }) {
         case 0:
             return (
                 <div className="card">
-                    <p>{text}</p>
+                    <p>Pergunta {text}</p>
                     <img onClick={() => setCard({ ...card, screen: 1 })} src={"./images/" + card.icon} alt={card.alt} />
                 </div>
             )

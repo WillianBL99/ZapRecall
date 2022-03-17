@@ -1,18 +1,17 @@
 import Card from "./Card"
 
-export default function ScreenDeck(){
+export default function ScreenDeck({cards}){
     return (
         <div className="deckofcards">
-            <FillDeck />
+            <FillDeck cards={cards}/>
         </div>
     )
 }
 
-function FillDeck(){
-    const cards = []
-    for(let i = 1; i <= 8; i++){
-        cards.push(<Card key={i} icon={"./images/play.svg"} text={"Pergunta " + i} alt="Icone" />)
-    }
-
-    return cards
+function FillDeck({cards}){
+    console.log(cards)
+    return cards.map((card, id) => {
+        const {q:question, a:answer} = card
+        return <Card text={(id + 1)} q={question} a={answer} />
+    })
 }
