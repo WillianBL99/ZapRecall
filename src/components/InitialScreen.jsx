@@ -1,9 +1,17 @@
+import React, {useState} from 'react'
+
+
 export default function InitialScreen(){
+    
+    const [visible, setVisible] = useState(true)
+
     return (
-        <>
+        visible?
+        <section className="login">
             <InitialLogoRecall />
-            <ButtonStart />
-        </>
+            <button className="btn-start" onClick={()=>setVisible(false)}>Iniciar Recall!</button>
+        </section>:
+        <></>
     )
 }
 
@@ -13,11 +21,5 @@ function InitialLogoRecall(){
             <img src="./images/logo.svg" alt="Logo" />
             <h1>ZapRecall</h1>
         </div>
-    )
-}
-
-function ButtonStart(){
-    return (
-        <button className="btn-start">Iniciar Recall!</button>
     )
 }
