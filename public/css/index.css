@@ -65,6 +65,8 @@ header h1 {
     margin-top: 35px;
 }
 
+/* <<< Cards >>> */
+
 .card {
     display: flex;
     justify-content: space-between;
@@ -81,9 +83,91 @@ header h1 {
     border-radius: 5px;
 }
 
+.card img {
+    margin-right: 6px;
+}
+
+.card-question {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 182px;
+    height: 80px;
+
+    padding: 6px;
+
+    background: #FFFFD5;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
+
+.card-question p {
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.card-question button {
+    border: none;
+    background: none;
+
+    margin-left: auto;
+}
+
+.card-answer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 182px;
+    height: 80px;
+
+    padding: 6px;
+
+    background: #FFFFD5;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
+
+.card-answer .buttons {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.card-answer p {
+    word-wrap: break-word;
+}
+
+.card-answer button {
+    width: 55px;
+    height: 24px;
+    border-radius: 5px;
+
+    border:none;
+
+    font-size: 7px;
+    font-weight: 400;
+
+    word-wrap: break-word;
+
+    color: #fff;
+}
+
+.good {
+    background: #2FBE34;
+}
+.medium {
+    background: #FF922E;;
+}
+.bad {
+    background: #FF3030;
+}
 
 
 /* <<< Login >>> */
+
+
 .login {
     display: flex;
     flex-direction: column;
