@@ -23,13 +23,18 @@ body {
     background-color: var(--main-color);
 }
 
-.root,main {
+.root{
+    width: 100vw;
+    height: 100vh;
+}
+
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: calc(100% - 50px);
 
 }
 
@@ -41,12 +46,14 @@ header {
     justify-content: center;
     align-items: center;
 
+    height: 50px;
     padding-top: 15px;
 }
 
 header img {
     width: 38px;
 }
+
 header h1 {
     margin-left: 10px;
 
@@ -60,9 +67,11 @@ header h1 {
 
 /* Deck of cards */
 .deckofcards {
+    overflow-y: auto;
     max-width: 800px;
 
     margin-top: 35px;
+    margin-bottom: 10px;
 }
 
 /* <<< Cards >>> */
@@ -96,6 +105,7 @@ header h1 {
     height: 80px;
 
     padding: 6px;
+    margin-bottom: 5px;
 
     background: #FFFFD5;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
@@ -123,6 +133,7 @@ header h1 {
     height: 80px;
 
     padding: 6px;
+    margin-bottom: 5px;
 
     background: #FFFFD5;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
