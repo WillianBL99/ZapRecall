@@ -3,11 +3,11 @@ import React, { useState } from 'react'
 export default function Card({text, question, answer, modifyFooter}) {
 
     const [card, setCard] = useState(
-        { screen: 0, icon: "play.svg", alt: "play" }
+        { screen: 0, icon: "play.svg", alt: "play", block: false }
     )
 
     function setAnswer(icon, alt){
-        setCard({ ...card, screen: 0, icon: icon, alt: alt})
+        setCard({ ...card, screen: 0, icon: icon, alt: alt, block: true})
         modifyFooter(<img src={"./images/" + icon} alt={icon} /> )
     }
 
@@ -16,7 +16,7 @@ export default function Card({text, question, answer, modifyFooter}) {
             return (
                 <div className="card">
                     <p>Pergunta {text}</p>
-                    <img onClick={() => setCard({ ...card, screen: 1 })} src={"./images/" + card.icon} alt={card.alt} />
+                    <img onClick={() => !card.block?setCard({ ...card, screen: 1 }):{}} src={"./images/" + card.icon} alt={card.alt} />
                 </div>
             )
         case 1:
