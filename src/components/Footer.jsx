@@ -1,9 +1,10 @@
-export default function Footer(props) {
+export default function Footer({answered, total, icons}) {
+    
     return (
         <footer>
-            <p>{props.icons.legth}/{props.total} CONCLUÍDOS</p>
+            <p>{icons.length}/{total} CONCLUÍDOS</p>
             <div className="answers">
-                {props.icons}
+                {icons}
             </div>
         </footer>
     )

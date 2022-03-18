@@ -4,10 +4,14 @@
     --main-font: 'Recursive', sans-serif;
     --font-logo: 'Righteous', cursive;
     --color-font: #fff;
+    
+    --height-header: 55px;
+    --height-footer: 60px;
 
     font-family: var(--main-font);
     font-weight: 700;
     font-size: 12px;
+
 }
 
 body {
@@ -34,7 +38,7 @@ main {
     align-items: center;
 
     width: 100%;
-    height: calc(100% - 50px);
+    height: calc(100% - calc(var(--height-header) + var(--height-footer)));
 
 }
 
@@ -46,7 +50,7 @@ header {
     justify-content: center;
     align-items: center;
 
-    height: 50px;
+    height: var(--height-header);
     padding-top: 15px;
 }
 
@@ -130,7 +134,7 @@ header h1 {
     justify-content: space-between;
 
     width: 182px;
-    height: 80px;
+    min-height: 80px;
 
     padding: 6px;
     margin-bottom: 5px;
@@ -148,6 +152,8 @@ header h1 {
 
 .card-answer p {
     word-wrap: break-word;
+
+    margin-bottom: 5px;
 }
 
 .card-answer button {
@@ -234,12 +240,10 @@ footer {
     justify-content: space-evenly;
     align-items: center;
 
-    height: 50px;
+    height: var(--height-footer);
 
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    font-family: var(--main-font);
+    font-weight: 400;
 
     box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
     background: #FFFFFF;
@@ -250,5 +254,9 @@ footer .answers {
     justify-content: center;
 
     width: 100%;
+}
+
+footer img {
+    margin: 0 2px;
 }
 

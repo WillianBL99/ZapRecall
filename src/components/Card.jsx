@@ -1,10 +1,15 @@
 import React, { useState } from 'react'
 
-export default function Card({text, q:question, a:answer}) {
+export default function Card({text, question, answer, modifyFooter}) {
 
     const [card, setCard] = useState(
         { screen: 0, icon: "play.svg", alt: "play" }
     )
+
+    function setAnswer(icon, alt){
+        setCard({ ...card, screen: 0, icon: icon, alt: alt})
+        modifyFooter(<img src={"./images/" + icon} alt={icon} /> )
+    }
 
     switch (card.screen) {
         case 0:
@@ -26,13 +31,13 @@ export default function Card({text, q:question, a:answer}) {
                 <div className="card-answer">
                     <p>{answer}</p>
                     <div className="buttons">
-                        <button onClick={() => setCard({ ...card, screen: 0, icon: "bad.svg", alt: "bad"})} className="bad">
+                        <button onClick={() => setAnswer('bad.svg', 'bad')} className="bad">
                             Não lembrei
                         </button>
-                        <button onClick={() => setCard({ ...card, screen: 0, icon: "medium.svg" , alt: "medium"})} className="medium">
+                        <button onClick={() => setAnswer('medium.svg', 'medium')} className="medium">
                             Quase não lembrei
                         </button>
-                        <button onClick={() => setCard({ ...card, screen: 0, icon: "good.svg" , alt: "good"})} className="good">
+                        <button onClick={() => setAnswer('good.svg', 'good')} className="good">
                             Zap
                         </button>
                     </div>

@@ -1,24 +1,28 @@
-import ScreenDeck from "./ScreenDeck";
+import React, { useState } from "react";
+
+import ScreenDecks from "./ScreenDecks";
 import Footer from "./Footer"
+import InitialScreen from "./InitialScreen"
 
 export default function MainScreen() {
+    const [footerData, setFooterData] = useState(
+        { total: 8, answered: 0, icons: [] }
+    )
 
-    const cards = [
-        {n: 1, q: 'O que é JSX?', a: 'Uma extensão de linguagem do JavaScript' },
-        {n: 2, q: 'O React é __', a: 'uma biblioteca JavaScript para construção de interfaces' },
-        {n: 3, q: 'Componentes devem iniciar com __ ', a: 'letra maiúscula' },
-        {n: 4, q: 'Podemos colocar __ dentro do JSX', a: 'expressões' },
-        {n: 5, q: 'O ReactDOM nos ajuda __', a: 'interagindo com a DOM para colocar componentes React na mesma' },
-        {n: 6, q: 'Usamos o npm para __', a: 'gerenciar os pacotes necessários e suas dependências' },
-        {n: 7, q: 'Usamos props para __', a: 'passar diferentes informações para componentes ' },
-        {n: 8, q: 'Usamos estado (state) para __', a: 'dizer para o React quais informações quando atualizadas devem renderizar a tela novamente' }
+    const { total, answered, icons } = footerData;
 
-    ]
+    function cardsUpdate(icon, qtdCards) {
+        setFooterData({ ...footerData, total: qtdCards, answered: answered + 1, icons: [...icons, icon] })
+    }
+
 
     return (
         <>
-            <ScreenDeck cards={cards} />
-            <Footer total={8} icons={[<img src="./images/bad.svg" alt="bad"></img>]} />
+            <main>
+                <InitialScreen />
+                <ScreenDecks modifyFooter={(icon, qtdCards) => cardsUpdate(icon, qtdCards)} />
+            </main>
+            <Footer answered={answered} total={total} icons={icons} />
         </>
     )
 }
