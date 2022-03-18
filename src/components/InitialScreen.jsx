@@ -1,5 +1,7 @@
 import React, {useState} from 'react'
 
+import ZapRecallLogo from '../assets/logo.svg'
+
 
 export default function InitialScreen(){
     
@@ -18,7 +20,7 @@ export default function InitialScreen(){
 function InitialLogoRecall(){
     return (
         <div className="logo">
-            <img src="./images/logo.svg" alt="Logo" />
+            <img src={ZapRecallLogo} alt="Logo" />
             <h1>ZapRecall</h1>
         </div>
     )
