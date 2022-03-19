@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import '../style/initialScreen.css'
 
+import React, { useState } from 'react'
 import ZapRecallLogo from '../assets/logo.svg'
 
 

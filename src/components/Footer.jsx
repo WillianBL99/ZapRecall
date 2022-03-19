@@ -1,3 +1,5 @@
+import '../style/footer.css'
+
 export default function Footer({wrong, zaps, total, icons}) {
 
     let title;

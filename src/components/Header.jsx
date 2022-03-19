@@ -1,3 +1,5 @@
+import '../style/header.css'
+
 import ZapRecallLogo from '../assets/logo.svg'
 
 export default function Header() {

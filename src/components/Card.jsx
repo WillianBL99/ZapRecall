@@ -1,3 +1,5 @@
+import '../style/card.css'
+
 import React, { useState } from 'react'
 
 import Bad from '../assets/bad.svg'
