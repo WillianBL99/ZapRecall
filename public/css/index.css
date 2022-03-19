@@ -8,10 +8,22 @@
     --height-header: 55px;
     --height-footer: 60px;
 
+    --width-card: 20vw;
+
     font-family: var(--main-font);
     font-weight: 700;
     font-size: 12px;
 
+}
+@media (max-width: 900px){
+    *{
+        --width-card: 96vw;
+    }
+}
+@media (min-width: 900px){
+    *{
+        --width-card: 50vw;
+    }
 }
 
 body {
@@ -72,7 +84,7 @@ header h1 {
 /* Deck of cards */
 .deckofcards {
     overflow-y: auto;
-    max-width: 800px;
+    width: var(--width-card);
 
     margin-top: 35px;
     margin-bottom: 10px;
@@ -85,8 +97,8 @@ header h1 {
     justify-content: space-between;
     align-items: center;
 
-    width: 182px;
-    height: 40px;
+    width: 100%;
+    min-height: 40px;
 
     padding: 6px;
     margin-bottom: 5px;
@@ -96,69 +108,64 @@ header h1 {
     border-radius: 5px;
 }
 
+
+
 .card img {
     margin-right: 6px;
 }
 
-.card-question {
+.card.question {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    width: 182px;
-    height: 80px;
-
-    padding: 6px;
-    margin-bottom: 5px;
-
     background: #FFFFD5;
-    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
-    border-radius: 5px;
 }
 
-.card-question p {
+.card.question p {
     margin-left: 5px;
     margin-top: 5px;
 }
 
-.card-question button {
+.card.question button {
+
+    margin-top: 25px;
+
     border: none;
     background: none;
 
     margin-left: auto;
 }
 
-.card-answer {
+.card.answer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    width: 182px;
-    min-height: 80px;
-
-    padding: 6px;
-    margin-bottom: 5px;
-
     background: #FFFFD5;
-    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
-    border-radius: 5px;
 }
 
-.card-answer .buttons {
-    display: flex;
-    justify-content: space-between;
-
-}
-
-.card-answer p {
+.card.answer p {
     word-wrap: break-word;
-
-    margin-bottom: 5px;
 }
 
-.card-answer button {
-    width: 55px;
-    height: 24px;
+.card.answer .buttons {
+    display: flex;
+    justify-content: space-evenly;
+
+    width: 100%;
+    margin-top: 25px;
+
+    margin:none;
+
+}
+
+.card.answer button {
+    width: 20%;
+    max-width: 100px;
+    min-width: 60px;
+    height: 28px;
+
     border-radius: 5px;
 
     border:none;

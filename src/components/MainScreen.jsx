@@ -12,7 +12,12 @@ export default function MainScreen() {
     const { total, answered, icons } = footerData;
 
     function cardsUpdate(icon, qtdCards) {
-        setFooterData({ ...footerData, total: qtdCards, answered: answered + 1, icons: [...icons, icon] })
+        setFooterData({
+            ...footerData,
+            total: qtdCards,
+            answered: answered + 1,
+            icons: [...icons, icon]
+        })
     }
 
 
