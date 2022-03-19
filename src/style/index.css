@@ -10,9 +10,14 @@
 
     --width-card: 20vw;
 
+    --font-size-max: 3rem;
+    --font-size-medium: 2.4rem;
+    --font-size-main: 1rem;
+    --font-size-min: 0.8rem;
+
     font-family: var(--main-font);
     font-weight: 700;
-    font-size: 12px;
+    font-size: var(--font-size-main);
 
 }
 @media (max-width: 900px){
@@ -75,7 +80,7 @@ header h1 {
 
     font-family: var(--font-logo);
     font-weight: 400;
-    font-size: 25px;
+    font-size: var(--font-size-medium);
 
     color: var(--color-font);
 }
@@ -132,6 +137,8 @@ header h1 {
     flex-direction: column;
     justify-content: space-between;
 
+    padding: 10px;
+
     background: #FFFFD5;
 }
 
@@ -155,6 +162,8 @@ header h1 {
     flex-direction: column;
     justify-content: space-between;
 
+    padding: 10px;
+
     background: #FFFFD5;
 }
 
@@ -177,13 +186,13 @@ header h1 {
     width: 20%;
     max-width: 100px;
     min-width: 60px;
-    height: 28px;
+    height: 2.4rem;
 
     border-radius: 5px;
 
     border:none;
 
-    font-size: 7px;
+    font-size: var(--font-size-min);
     font-weight: 400;
 
     word-wrap: break-word;
@@ -230,7 +239,7 @@ button.bad {
 
     font-family: var(--font-logo);
     font-weight: 400;
-    font-size: 25px;
+    font-size: var(--font-size-max);
 
     color: var(--color-font);
 }
@@ -271,12 +280,12 @@ footer {
 
 footer h2 {
     font-weight: 700;
-    font-size: 14px;
+    font-size: var(--font-size-main);
 }
 
 footer p {    
     font-weight: 700;
-    font-size: 14px;
+    font-size: var(--font-size-main);
 
     margin: 5px 0;
 }
