@@ -6,28 +6,32 @@ import InitialScreen from "./InitialScreen"
 
 export default function MainScreen() {
     const [footerData, setFooterData] = useState(
-        { total: 8, answered: 0, icons: [] }
+        { wrong: true, total: 8, zaps: 0, icons: [] }
     )
 
-    const { total, answered, icons } = footerData;
+    const {wrong, total, zaps, icons } = footerData;
 
-    function cardsUpdate(icon, qtdCards) {
+    function cardsUpdate(error, zap, icon, qtdCards) {
+        console.log(zap)
+        console.log(error)
         setFooterData({
             ...footerData,
+            wrong: wrong?error:false,
             total: qtdCards,
-            answered: answered + 1,
+            zaps: zaps + zap,
             icons: [...icons, icon]
         })
     }
+    console.log(wrong)
 
 
     return (
         <>
             <main>
                 <InitialScreen />
-                <ScreenDecks modifyFooter={(icon, qtdCards) => cardsUpdate(icon, qtdCards)} />
+                <ScreenDecks modifyFooter={(error, zaps, icon, qtdCards) => cardsUpdate(error, zaps, icon, qtdCards)} />
             </main>
-            <Footer answered={answered} total={total} icons={icons} />
+            <Footer wrong={wrong} zaps={zaps} total={total} icons={icons} />
         </>
     )
 }

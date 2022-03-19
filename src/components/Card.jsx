@@ -15,10 +15,11 @@ export default function Card({ text, question, answer, modifyFooter }) {
 
     function setAnswer(icon, alt) {
         setCard({ ...card, screen: 0, icon: icon, alt: alt, block: true })
-        modifyFooter(<img src={icon} alt={icon} />)
+        modifyFooter(alt==='bad'?false:true, alt==='good'?1:0, <img src={icon} alt={icon} />)
     }
 
-    const css = card.screen === 1 ? 'card question' : card.screen === 2 ? 'card answer' : 'card'
+    const css = card.screen === 1 ? 'card question ' : card.screen === 2 ? 'card answer ' : 'card '
+    const cssAnswer = card.alt === 'play'?'':card.alt;
 
     const screen0 = <>
         <p>Pergunta {text}</p>
@@ -47,7 +48,7 @@ export default function Card({ text, question, answer, modifyFooter }) {
 
 
     return (
-        <div className={css}>{
+        <div className={css + cssAnswer}>{
             card.screen === 0 ? screen0 :
                 card.screen === 1 ? screen1 :
                     screen2
