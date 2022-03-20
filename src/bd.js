@@ -17,4 +17,23 @@ export default class Decks {
     get decks(){
         return this.cards;
     }
+
+    get shuffleDecks(){
+        return shuffleObject(this.cards);
+    }
+
+    
+}
+
+// Embaralhar array
+function shuffleObject(obj) {
+    for (let i = obj.length - 1; i > 0; i--) {
+        // gera índices aleatórios dentro do permitido para o 'obj'
+        const j = (Math.floor((Math.random() * 10)%obj.length));
+
+        const aux = obj[i];
+        obj[i] = obj[j];
+        obj[j] = aux;
+    }
+    return obj;
 }

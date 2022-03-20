@@ -1,12 +1,11 @@
 import '../style/screenDecks.css'
 
 import Decks from '../bd'
-
 import Card from "./Card"
 
 
 export default function ScreenDecks({modifyFooter}){
-    let cards = new Decks().decks
+    const cards = new Decks().shuffleDecks
 
     return (
         <div className="deckofcards">
