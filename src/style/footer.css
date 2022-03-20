@@ -18,15 +18,20 @@ footer {
 }
 
 footer h2 {
-    font-weight: 700;
-    font-size: var(--font-size-main);
+    font-weight: bold;
+    font-size: 1.2rem;
+
+    margin-top: 15px;
 }
 
-footer p {    
+footer p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+footer p.qtd-finished {    
     font-weight: 700;
     font-size: var(--font-size-main);
-
-    margin: 5px 0;
 }
 
 footer .answers {
@@ -37,5 +42,5 @@ footer .answers {
 }
 
 footer img {
-    margin: 0 2px;
+    margin: 15px 2px;
 }

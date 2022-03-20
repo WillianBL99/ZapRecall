@@ -9,7 +9,7 @@ export default function Footer({wrong, zaps, total, icons}) {
         <><h2>😥PUTZ!</h2><p>Ainda faltaram alguns...      Mas não desanime!</p></>
         
     } else {
-        title = <p>{icons.length}/{total} CONCLUÍDOS</p>
+        title = <p className='qtd-finished'>{icons.length}/{total} CONCLUÍDOS</p>
     }
     
     return (
