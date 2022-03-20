@@ -4,34 +4,37 @@ import ScreenDecks from "./ScreenDecks";
 import Footer from "./Footer"
 import InitialScreen from "./InitialScreen"
 
+
 export default function MainScreen() {
+    
     const [footerData, setFooterData] = useState(
-        { wrong: true, total: 8, zaps: 0, icons: [] }
+        { wrong: true, total: 8, zaps: 0, icons: [] , keyDeck: 1}
     )
 
-    const {wrong, total, zaps, icons } = footerData;
+    const { wrong, total, zaps, icons, keyDeck} = footerData
 
     function cardsUpdate(error, zap, icon, qtdCards) {
-        console.log(zap)
-        console.log(error)
         setFooterData({
             ...footerData,
-            wrong: wrong?error:false,
+            wrong: wrong ? error : false,
             total: qtdCards,
             zaps: zaps + zap,
             icons: [...icons, icon]
         })
     }
-    console.log(wrong)
 
+    function restartRecall(){
+        setFooterData({wrong: true, total: 8, zaps: 0, icons: [], keyDeck: keyDeck + 1})
+    }
 
     return (
         <>
             <main>
                 <InitialScreen />
-                <ScreenDecks modifyFooter={(error, zaps, icon, qtdCards) => cardsUpdate(error, zaps, icon, qtdCards)} />
+                {console.log(keyDeck)}
+                <ScreenDecks key={keyDeck} modifyFooter={(error, zaps, icon, qtdCards) => cardsUpdate(error, zaps, icon, qtdCards)} />
             </main>
-            <Footer wrong={wrong} zaps={zaps} total={total} icons={icons} />
+            <Footer key={keyDeck} wrong={wrong} zaps={zaps} total={total} icons={icons} restart={restartRecall} />
         </>
     )
 }
