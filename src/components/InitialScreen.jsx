@@ -3,16 +3,22 @@ import '../style/initialScreen.css'
 import React, { useState } from 'react'
 import ZapRecallLogo from '../assets/logo.svg'
 
+import Decks from '../bd'
+
 
 export default function InitialScreen() {
-
-    const [visible, setVisible] = useState(true)
+    const decksName = new Decks().decksName
+    console.log(decksName)
+    const [visibleScreen, setVisibleScreen] = useState(true)
 
     return (
-        visible ?
+        visibleScreen ?
             <section className="login">
                 <InitialLogoRecall />
-                <Button setVisible={(value) => setVisible(value)} />
+                <div className='comands'>
+                    <InputDeck decksName={decksName} />
+                    <Button setVisibleScreen={(value) => setVisibleScreen(value)} />
+                </div>
             </section> :
             <></>
     )
@@ -27,9 +33,26 @@ function InitialLogoRecall() {
     )
 }
 
-function Button({ setVisible }) {
+function InputGoal() {
+}
+
+function InputDeck({ decksName }) {
     return (
-        <button className="btn-start" onClick={() => setVisible(false)}>
+        <select required>
+            <option value='' disabled selected>Escolha um baralho</option>
+            {
+                decksName.map(nameDeck => {
+                    nameDeck[0].toUpperCase()
+                    return <option value={nameDeck}>{nameDeck}</option>
+                })
+            }
+        </select>
+    )
+}
+
+function Button({ setVisibleScreen }) {
+    return (
+        <button className="btn-start" onClick={() => setVisibleScreen(false)}>
             Iniciar Recall!
         </button>
     )

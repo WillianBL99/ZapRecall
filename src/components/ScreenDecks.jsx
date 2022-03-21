@@ -6,7 +6,7 @@ import Card from "./Card"
 
 export default function ScreenDecks({modifyFooter}){
 
-    const cards = new Decks().shuffleDecks
+    const cards = new Decks().shuffleDeck('JSX')
 
     return (
         <div className="deckofcards">
