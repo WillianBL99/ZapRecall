@@ -4,7 +4,7 @@ import '../style/footer.css'
 export default function Footer({wrong, zaps, total, icons, restart}) {
 
     let title;
-    const finished = icons.length === total;
+    const finished = icons.length == total;
 
     if(finished){
         title = wrong?

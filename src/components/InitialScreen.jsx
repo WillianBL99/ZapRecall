@@ -6,9 +6,7 @@ import ZapRecallLogo from '../assets/logo.svg'
 import Decks from '../bd'
 
 
-export default function InitialScreen() {
-    const decksName = new Decks().decksName
-    console.log(decksName)
+export default function InitialScreen({ setChosenDeckInfo }) {
     const [visibleScreen, setVisibleScreen] = useState(true)
 
     return (
@@ -16,7 +14,7 @@ export default function InitialScreen() {
             <section className="login">
                 <InitialLogoRecall />
                 <div className='comands'>
-                    <InputDeck decksName={decksName} />
+                    <InputDeck setChosenDeckInfo={setChosenDeckInfo} />
                     <Button setVisibleScreen={(value) => setVisibleScreen(value)} />
                 </div>
             </section> :
@@ -36,14 +34,16 @@ function InitialLogoRecall() {
 function InputGoal() {
 }
 
-function InputDeck({ decksName }) {
+function InputDeck({ setChosenDeckInfo }) {
+
+    const decksInfo = new Decks().decksInfo
+    
     return (
-        <select required>
-            <option value='' disabled selected>Escolha um baralho</option>
+        <select required onChange={(e) => {const [index, qtd] = e.target.value.split(' ');console.log(index,qtd);setChosenDeckInfo({index: index, qtdCards: qtd});}}>
+            <option value='' disabled selected >Escolha um baralho</option>
             {
-                decksName.map(nameDeck => {
-                    nameDeck[0].toUpperCase()
-                    return <option value={nameDeck}>{nameDeck}</option>
+                decksInfo.map((infoDeck) => {
+                    return  <option key={infoDeck.toString()} value={`${infoDeck.index} ${infoDeck.qtdCards}`}>{infoDeck.name}</option>
                 })
             }
         </select>
@@ -57,3 +57,10 @@ function Button({ setVisibleScreen }) {
         </button>
     )
 }
+
+
+
+
+
+
+

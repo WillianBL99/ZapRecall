@@ -4,9 +4,9 @@ import Decks from '../bd'
 import Card from "./Card"
 
 
-export default function ScreenDecks({modifyFooter}){
-
-    const cards = new Decks().shuffleDeck('JSX')
+export default function ScreenDecks({modifyFooter, chosenDeckInfo}){
+    console.log(chosenDeckInfo)
+    const cards = new Decks().shuffleDeck(chosenDeckInfo.index)
 
     return (
         <div className="deckofcards">
