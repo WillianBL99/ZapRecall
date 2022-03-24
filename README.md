@@ -1,70 +1,172 @@
-# Getting Started with Create React App
+<div align="center">
+    <img width="100" src="https://user-images.githubusercontent.com/65803142/160006834-6d565186-c4a0-44a8-9110-38b63da835f0.svg"><h1>ZapRecall</h1>
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1>
+    <img src="public/apresentacao.gif">
+</h1>
 
-## Available Scripts
+<h3 align="center">
+    <a href="https://rocketmusics.herokuapp.com/">Acessar a demonstração</a>
+<h3 >
 
-In the project directory, you can run:
+# Indice
 
-### `npm start`
+- [Sobre](#-sobre)
+- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
+- [Como baixar o projeto](#-como-baixar-o-projeto)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🔖&nbsp; Sobre
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+O projeto **RocketMusic** é um e-commerce que foi criado dentro do curso **Bootcamp GoStack** com o intuito de colocarmos em prática todo conteúdo estudado durante o curso.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 Tecnologias utilizadas
 
-### `npm run build`
+O projeto foi desenvolvido utilizando as seguintes tecnologias
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [ReactJS](https://reactjs.org)
+- [Redux](https://redux.org)
+- [Axios](https://github.com/axios/axios)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🗂 Como baixar o projeto
 
-### `npm run eject`
+```bash
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+    # Clonar o repositório
+    $ git clone https://github.com/danileao/rocketmusic
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    # Entrar no diretório
+    $ cd rocketmusic
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+    # Instalar as dependências
+    $ yarn install
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+    # Iniciar o projeto
+    $ yarn start
+```
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Desenvolvido 💜 por Daniele Leão Evangelista
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+<p align="center">
+  <a href="">
+    <img width="200" src="https://user-images.githubusercontent.com/65803142/160006834-6d565186-c4a0-44a8-9110-38b63da835f0.svg">
+  </a>
+</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<h1 align="center">ZapRecall</h1>
 
-### `npm run build` fails to minify
+<p align="center">Ferramenta de aprendizado com flashcards </p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="center">🃏⚡Uma ferramenta de estudos utilizando flashcards para ajudar a memorizar algo que pretenda estudar </p>
+
+<h1 align="center">Ant Design</h1>
+
+
+
+<div align="center">
+  <a href="https://wakatime.com/badge/user/ea37d403-453f-4319-bd0c-77e54bb1318a/project/ee5f39a4-23ff-40a9-b3ea-e40dc49aabd4"><img src="https://wakatime.com/badge/user/ea37d403-453f-4319-bd0c-77e54bb1318a/project/ee5f39a4-23ff-40a9-b3ea-e40dc49aabd4.svg" alt="wakatime"></a>
+
+  <img src="https://img.shields.io/static/v1?label=|&message=JS&color=61DAFB&style=flat&logo=javascript"/>
+  <img src="https://img.shields.io/static/v1?label=|&message=React JS&color=61DAFB&style=flat&logo=react"/>
+  <img src="https://img.shields.io/static/v1?label=|&message=CSS3&color=61DAFB&style=flat&logo=css3"/>
+  <img src="https://img.shields.io/static/v1?label=|&message=Git&color=61DAFB&style=flat&logo=git"/>
+  <img src="https://img.shields.io/static/v1?label=|&message=Trello&color=61DAFB&style=flat&logo=trello"/>
+
+</div>
+
+<!--ts-->
+   * [Sobre](#Sobre)
+   * [Tabela de Conteudo](#tabela-de-conteudo)
+   * [Instalação](#instalacao)
+   * [Como usar](#como-usar)
+      * [Pre Requisitos](#pre-requisitos)
+      * [Local files](#local-files)
+      * [Remote files](#remote-files)
+      * [Multiple files](#multiple-files)
+      * [Combo](#combo)
+   * [Tests](#testes)
+   * [Tecnologias](#tecnologias)
+<!--te-->
+
+<p align="center">
+ <a href="#objetivo">Objetivo</a> •
+ <a href="#roadmap">Roadmap</a> • 
+ <a href="#tecnologias">Tecnologias</a> • 
+ <a href="#contribuicao">Contribuição</a> • 
+ <a href="#licenc-a">Licença</a> • 
+ <a href="#autor">Autor</a>
+</p>
+
+<h4 align="center"> 
+	🚧  React Select 🚀 Em construção...  🚧
+</h4>
+
+### Features
+
+- [x] Cadastro de usuário
+- [x] Cadastro de cliente
+- [ ] Cadastro de produtos
+
+### Pré-requisitos
+
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+
+### 🎲 Rodando o Back End (servidor)
+
+```bash
+# Clone este repositório
+$ git clone <https://github.com/tgmarinho/nlw1>
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd nlw1
+
+# Vá para a pasta server
+$ cd server
+
+# Instale as dependências
+$ npm install
+
+# Execute a aplicação em modo de desenvolvimento
+$ npm run dev:server
+
+# O servidor inciará na porta:3333 - acesse <http://localhost:3333>
+```
+
+### 🛠 Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+- [Expo](https://expo.io/)
+- [Node.js](https://nodejs.org/en/)
+- [React](https://pt-br.reactjs.org/)
+- [React Native](https://reactnative.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+
+🏁 Tópicos
+👉  Descrição do projeto
+
+👉 Funcionalidades
+
+👉  Deploy da Aplicação
+
+👉  Pré-requisitos
+
+👉 Como rodar a aplicação
+
