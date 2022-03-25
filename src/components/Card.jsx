@@ -24,7 +24,7 @@ export default function Card({ text, question, answer, modifyFooter }) {
     const cssAnswer = card.alt === 'play'?'':card.alt;
 
     const screen0 = <>
-        <p>Pergunta {text}</p>
+        <p>Flashcard {text}</p>
         <img onClick={() => !card.block ? setCard({ ...card, screen: 1 }) : {}} src={card.icon} alt={card.alt} />
     </>
 

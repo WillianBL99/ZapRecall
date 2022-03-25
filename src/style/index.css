@@ -10,10 +10,10 @@
 
     --width-card: 20vw;
 
-    --font-size-max: 3rem;
-    --font-size-medium: 2.4rem;
-    --font-size-main: 1rem;
-    --font-size-min: 0.8rem;
+    --font-size-max: 3.2rem;
+    --font-size-medium: 2.6rem;
+    --font-size-main: 1.2rem;
+    --font-size-min: 1rem;
 
     font-family: var(--main-font);
     font-weight: 700;
